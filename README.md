@@ -81,6 +81,104 @@ console.log(NaN === "") // false
 console.log(NaN == 0); // false
 console.log(Object.is(NaN, NaN)); // trun e
 ```
+---
+6.
+```sh
+const obj = {name:"JS"};
+const arr = ['name'];
+obj[arr] = "react";
+console.log(obj.name);
+```
+```sh
+//output
+react
+```
+---
+7.
+```sh
+const str = `let n1 = 2;
+let n2 = 2;
+console.log(n1+n2)`
+setTimeout(str, 1000);
+```
+```sh
+//output
+4
+```
+setTimeout usees eval() method to execute str
+
+---
+8.
+```sh
+console.log(await "4");
+```
+```sh
+//output
+4
+```
+console.log(await "4"); works like await Promise.resolve("4")
+
+---
+9.
+```sh
+const {length} = "JS";
+console.log(length);
+```
+```sh
+//output
+2
+```
+This code is working on the concept of "BOXING". Please watch the explaination.
+
+---
+10.
+```sh
+function fetchData(){
+    
+}
+console.log(fetchData());
+```
+```sh
+//output
+undefined
+```
+```sh
+async function fetchData(){
+    
+}
+console.log(fetchData());
+```
+```sh
+//output
+Promise {<fulfilled>: undefined}
+```
+```sh
+async function fetchData(){
+    return 1
+}
+console.log(fetchData());
+```
+```sh
+//output
+Promise {<fulfilled>: 1}
+```
+
+---
+11.
+```sh
+const n2 = 10;
+const n1 = "2";
+console.log(n2+n1);
+console.log(n2-n1);
+```
+```sh
+//output
+'102'
+8
+```
+Node: incase of '+' javascirpt gives more importance to concatination then addition while one of the operand is string
+
+
 
 
 
