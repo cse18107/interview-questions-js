@@ -178,6 +178,244 @@ console.log(n2-n1);
 ```
 Node: incase of '+' javascirpt gives more importance to concatination then addition while one of the operand is string
 
+---
+12.
+```sh
+const arr = [0,1,2,3,4,5,6];
+
+arr.forEach(function(num){
+    console.log(num);
+    if(num===3) {
+        return;
+    }
+})
+```
+
+```sh
+//output
+0
+1
+2
+3
+4
+5
+6
+```
+```sh
+const arr = [0,1,2,3,4,5,6];
+
+arr.forEach(function(num){
+    console.log(num);
+    if(num===3) {
+        arr.length = 0;
+    }
+})
+```
+
+```sh
+//output
+0
+1
+2
+3
+```
+Note: We can't break foreach loop using return
+
+---
+
+13.
+```sh
+const arr = [];
+arr[10] = 10;
+console.log(arr.length);
+arr[100] = 100;
+console.log(arr.length)
+```
+
+```sh
+11
+101
+```
+---
+
+14.
+
+```sh
+const arr = [];
+arr[10] = 10;
+arr[100] = 100;
+arr.forEach(d => {
+    console.log("Hi");
+})
+```
+```sh
+hi
+hi
+```
+Note: If you skip the initialization of index(in above example 0-9 and 11-99 all the indexes are skiped) then array does not initialize index to that and to work with forEach we need index to be initialized.
+
+---
+
+15.
+
+```sh
+console.log(z);
+z = 1;
+```
+```sh
+ReferenceError
+```
+
+---
+
+16.
+
+```sh
+const arr = new Array(2);
+console.log(arr);
+arr.forEach(elem => {
+    console.log(elem);
+})
+```
+```sh
+[ <2 empty items> ]
+```
+---
+
+17.
+
+```sh
+const arr = new Array(2);
+console.log(arr);
+[...arr].forEach(elem => {
+    console.log("🐦");
+})
+```
+```sh
+[ <2 empty items> ]
+🐦
+🐦
+```
+
+---
+
+18.
+```sh
+const P1 = new Promise(resolve => {
+    resolve("Done");
+});
+P1.then(() => {
+    return 10;
+}).catch().then((data) => {
+    console.log(data);
+})
+```
+```sh
+10
+```
+see the explaination
+
+---
+
+19.
+
+```sh
+const arr = [1,2,3,4];
+const reversed = arr.reverse(); // this method will mutate the actual array and also return then new array
+const reversed = arr.toReversed(); // this method will not mutate the actual array but return the new array
+console.log("reve", reversed);
+```
+
+---
+
+20.
+
+```sh
+Promise.resolve(() => {
+    return "🎉";
+}).then((data) => {
+    console.log(data);
+})
+```
+
+```sh
+() => {
+    return "🎉"
+}
+```
+
+---
+
+21.
+
+```sh
+Promise.resolve("3").then((data) => {
+    console.log(data);
+})
+```
+
+```sh
+"3"
+```
+
+---
+
+22.
+
+```sh
+function test() {
+    const a = b = c = "🥗";
+}
+test();
+console.log(typeof a);
+console.log(typeof b);
+console.log(typeof c);
+```
+```sh
+'undefined'
+'string'
+'string'
+```
+
+watch the explaination.
+
+---
+
+23.
+
+```sh
+new Promise((resolve) => {
+    resolve("🐦");l
+    Promise.resolve().then(() => {
+       console.log("🥗"); 
+    });
+}).then((data) => {
+    console.log(data);
+})
+```
+```sh
+🥗
+🐦
+```
+
+---
+24.
+How can you position a child inside parent with out using position, flex and grid property
+```sh
+<div class="parent">
+    <div class="child"></div>
+</div>
+```
+```sh
+.parent{
+    background-color: 'violet';
+    align-content: center
+}
+.child{
+    background-color: 'red';
+    margin: auto
+}
+```
 
 
 
