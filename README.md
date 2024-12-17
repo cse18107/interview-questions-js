@@ -417,6 +417,62 @@ How can you position a child inside parent with out using position, flex and gri
 }
 ```
 
+---
+25.
+```sh
+const func = (function (a) {
+    delete a;
+    return a;
+})(5);
+
+console.log(func);
+```
+```sh
+5
+```
+
+Explaination: delete keyword will effect only object properties not local variable, here "a" is a local varialble. so this will not effect the variable "a" and it this IFEE will return 5.
+
+---
+
+26.
+```sh
+const a = {};
+const b = { key: "b" };
+const c = { key: "c" };
+
+a[b] = 123;
+a[c] = 456;
+
+console.log(a[b]);
+```
+```sh
+456
+```
+
+Explaination: if i do a[b] = 123 then inside "a" object will store { "[object Object]": 123 }. if i a[c] = 456, here "c" will also refers to the same "[object Object]" so this will override the existing value 123.
+
+---
+
+27.
+
+```sh
+const User = {
+    name: "Leynd",
+    age: 23,
+    height: 5.6
+}
+const stringify = JSON.stringify(User, ["age","height"]);
+console.log(stringify);
+```
+
+```sh
+{"age":23,"height":5.6}
+```
+
+Explaination: If you mention any properties inside array which is present in the object then Stringify method will stringify only those properties.
+
+
 
 
 
