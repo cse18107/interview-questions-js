@@ -1,7 +1,8 @@
 // =============================================
 // Deep Compare Objects and Arrays in Javascript
 
-'''function deepEqual(obj1, obj2) {
+```
+function deepEqual(obj1, obj2) {
   if(obj1 === obj2) return true;
 
   if(obj1 === null || obj2 === null) return false;
@@ -24,5 +25,5 @@ console.log(deepEqual(1,1));
 console.log(deepEqual({a:1},{a:1}));
 console.log(deepEqual({a:1, b:{c:2}, d:{e:{f:3}}}, {a:1, b:{c:2}, d:{e:{f:3}}}));
 console.log(deepEqual([{a:1, b:{c:2}, d:{e:{f:3}}},2],[{a:1, b:{c:2}, d:{e:{f:3}}},2]));
-'''
+```
 // =============================================
