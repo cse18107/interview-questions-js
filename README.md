@@ -1,3 +1,7 @@
+lectures :
+
+ - [ ] [Object defileProperty](https://www.youtube.com/watch?v=_k3WiANNB4U)
+
 1. 
 ```sh
 // code
