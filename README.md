@@ -1,5 +1,6 @@
 lectures :
 
+ - [ ] [Javascript Language](https://javascript.info/js)
  - [ ] [Object defileProperty](https://www.youtube.com/watch?v=_k3WiANNB4U)
  - [ ] [Object properties configuration](https://javascript.info/object-properties)
 
