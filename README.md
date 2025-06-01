@@ -439,4 +439,24 @@ console.log(obj);
 ```
 
 ---
+## 29. when should we use 
+const a = 4**4;
+and Math.pow(4,4)
 
+if you are working with Big ints then 4**4 will work for you
+
+---
+
+## 29. what is the output of this code
+```js
+function matic() {
+    return x = 1,[],{};
+}
+console.log(magic());
+```
+
+```js
+{}
+```
+
+---
