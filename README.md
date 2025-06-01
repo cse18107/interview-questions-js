@@ -10,6 +10,7 @@ Sure! Here’s a beautified, well-organized Markdown version of the content you'
 - [ ] [Object.defineProperty](https://www.youtube.com/watch?v=_k3WiANNB4U)
 - [ ] [Object Properties Configuration](https://javascript.info/object-properties)
 - [ ] [FlatMap (filter + map) ](https://www.youtube.com/shorts/QT2-GG-zUzM)
+- [ ] [Composition in JS](https://www.youtube.com/watch?v=DKce5yj2ADM&list=PLinedj3B30sCZRV74kZrnOXU9zVdKY68w&index=4)
 
 ---
 
